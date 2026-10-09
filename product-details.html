@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - VISION STYLE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="VISION STYLE">
+                        <span>VISION STYLE</span>
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="ابحث عن نظارات...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="header-icons">
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="count">0</span>
+                        </a>
+                        <a href="account.html" class="icon-link">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">التواصل</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-details-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span> / </span>
+                <a href="products.html">المنتجات</a>
+                <span> / </span>
+                <span id="product-name">تفاصيل المنتج</span>
+            </div>
+
+            <div class="product-details-container">
+                <!-- الجانب الأيسر - صور المنتج -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="images/product1.jpg" alt="صورة المنتج">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img class="thumbnail active" src="images/product1.jpg" alt="صورة مصغرة 1">
+                        <img class="thumbnail" src="images/product1-2.jpg" alt="صورة مصغرة 2">
+                        <img class="thumbnail" src="images/product1-3.jpg" alt="صورة مصغرة 3">
+                        <img class="thumbnail" src="images/product1-4.jpg" alt="صورة مصغرة 4">
+                    </div>
+                </div>
+
+                <!-- الجانب الأيمن - معلومات المنتج -->
+                <div class="product-info">
+                    <h1 id="product-title">نظارات رياضية Ray-Ban</h1>
+
+                    <div class="product-rating">
+                        <div class="stars" id="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span id="product-reviews">(250 تقييم)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price" id="current-price">12000 د.ج</span>
+                        <span class="original-price" id="original-price">15000 د.ج</span>
+                        <span class="discount-badge">خصم 20%</span>
+                    </div>
+
+                    <div class="product-description" id="product-description">
+                        <p>نظارات رياضية عالية الجودة من Ray-Ban، مصممة لحماية عينيك خلال الأنشطة الرياضية المختلفة. تأتي بعدسات متعددة الألوان قابلة للتغيير حسب الظروف الجوية.</p>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="color-options">
+                            <h3>اختر اللون:</h3>
+                            <div class="color-picker" id="color-picker">
+                                <div class="color-option selected" data-color="أسود" style="background-color: #000000"></div>
+                                <div class="color-option" data-color="أحمر" style="background-color: #FF0000"></div>
+                                <div class="color-option" data-color="أزرق" style="background-color: #0000FF"></div>
+                            </div>
+                        </div>
+
+                        <div class="size-options">
+                            <h3>اختر المقاس:</h3>
+                            <div class="size-picker" id="size-picker">
+                                <div class="size-option" data-size="S">S</div>
+                                <div class="size-option selected" data-size="M">M</div>
+                                <div class="size-option" data-size="L">L</div>
+                            </div>
+                        </div>
+
+                        <div class="quantity-selector">
+                            <h3>الكمية:</h3>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn decrease">-</button>
+                                <input type="number" class="quantity-input" id="quantity-input" value="1" min="1" max="10">
+                                <button class="quantity-btn increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary" id="add-to-cart-btn">أضف للسلة</button>
+                        <button class="btn btn-secondary" id="add-to-favorites-btn">
+                            <i class="far fa-heart"></i> أضف للمفضلة
+                        </button>
+                        <button class="btn btn-secondary" id="share-btn">
+                            <i class="fas fa-share-alt"></i> شارك
+                        </button>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>المميزات:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> حماية 100% من الأشعة فوق البنفسجية</li>
+                            <li><i class="fas fa-check"></i> عدسات متعددة الألوان قابلة للتغيير</li>
+                            <li><i class="fas fa-check"></i> إطار خفيف ومقاوم للصدمات</li>
+                            <li><i class="fas fa-check"></i> تصميم مريح للاستخدام الطويل</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلومات إضافية -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-header active" data-tab="description">الوصف</button>
+                    <button class="tab-header" data-tab="specifications">المواصفات</button>
+                    <button class="tab-header" data-tab="reviews">التقييمات</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        <p>نظارات رياضية عالية الجودة من Ray-Ban، مصممة خصيصاً للأنشطة الرياضية الخارجية. تأتي هذه النظارات بعدسات متعددة الألوان قابلة للتغيير حسب الظروف الجوية، مما يوفر رؤية واضحة في جميع الظروف.</p>
+                        <p>الإطار مصنوع من مواد خفيفة ومتينة، مما يجعلها مريحة للاستخدام لفترات طويلة. كما أنها توفر حماية كاملة من الأشعة فوق البنفسجية الضارة.</p>
+                    </div>
+
+                    <div class="tab-pane" id="specifications">
+                        <table class="specifications-table">
+                            <tr>
+                                <td>الماركة</td>
+                                <td>Ray-Ban</td>
+                            </tr>
+                            <tr>
+                                <td>الموديل</td>
+                                <td>RB3025</td>
+                            </tr>
+                            <tr>
+                                <td>شكل الإطار</td>
+                                <td>طيار</td>
+                            </tr>
+                            <tr>
+                                <td>مادة الإطار</td>
+                                <td>معدني</td>
+                            </tr>
+                            <tr>
+                                <td>لون الإطار</td>
+                                <td>أسود</td>
+                            </tr>
+                            <tr>
+                                <td>نوع العدسة</td>
+                                <td>متعددة الألوان</td>
+                            </tr>
+                            <tr>
+                                <td>حماية UV</td>
+                                <td>UV400</td>
+                            </tr>
+                            <tr>
+                                <td>بلد المنشأ</td>
+                                <td>إيطاليا</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane" id="reviews">
+                        <div class="reviews-summary">
+                            <div class="average-rating">
+                                <div class="rating-number">4.5</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="reviews-count">250 تقييم</div>
+                            </div>
+
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 نجوم</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 60%"></div>
+                                    </div>
+                                    <span>60%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 نجوم</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 25%"></div>
+                                    </div>
+                                    <span>25%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 نجوم</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 10%"></div>
+                                    </div>
+                                    <span>10%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>نجمتان</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 3%"></div>
+                                    </div>
+                                    <span>3%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>نجمة</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 2%"></div>
+                                    </div>
+                                    <span>2%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-name">أحمد محمد</div>
+                                        <div class="review-date">15 يونيو 2023</div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>نظارات رائعة وجودة ممتازة. استخدمتها أثناء ركوب الدراجة وكانت مريحة جداً وتوفر رؤية واضحة حتى في ضوء الشمس المباشر.</p>
+                                </div>
+                            </div>
+
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-name">سارة أحمد</div>
+                                        <div class="review-date">10 يونيو 2023</div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>نظارات أنيقة وعصرية، لكنها كانت أكبر بقليل مما توقعت. بشكل عام، جيدة جداً وأنا سعيدة بالشراء.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-secondary">عرض جميع التقييمات</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتجات ذات صلة -->
+            <div class="related-products">
+                <h2>منتجات ذات صلة</h2>
+                <div class="products-grid" id="related-products-grid">
+                    <!-- سيتم تحميل المنتجات ذات الصلة عبر JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>روابط مهمة</h3>
+                    <ul>
+                        <li><a href="policies.html">السياسات</a></li>
+                        <li><a href="terms.html">شروط الاستخدام</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك للحصول على آخر العروض والمنتجات الجديدة</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني">
+                        <button type="submit">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VISION STYLE. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>

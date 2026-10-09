@@ -1,0 +1,336 @@
+/* صفحة الدفع */
+.checkout-page {
+    padding: 40px 0 80px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.breadcrumb {
+    color: var(--light-text);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* خطوات الدفع */
+.checkout-step {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.step-header h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.checkout-step:not(.active) .step-header {
+    background-color: #f1f1f1;
+}
+
+.checkout-step:not(.active) .step-number {
+    background-color: #ccc;
+}
+
+.step-content {
+    padding: 30px;
+    display: none;
+}
+
+.checkout-step.active .step-content {
+    display: block;
+}
+
+/* نموذج الدفع */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* خيارات الشحن والدفع */
+.shipping-options,
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.shipping-option,
+.payment-option {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shipping-option:hover,
+.payment-option:hover {
+    border-color: var(--primary-color);
+}
+
+.shipping-option input[type="radio"],
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.shipping-option input[type="radio"]:checked + .option-content,
+.payment-option input[type="radio"]:checked + .option-content {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.option-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.option-title i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.option-details {
+    color: var(--light-text);
+    font-size: 14px;
+    margin-right: auto;
+}
+
+.option-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+/* أزرار التنقل بين الخطوات */
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.step-buttons .btn {
+    min-width: 120px;
+}
+
+/* ملخص الطلب */
+.order-summary {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-items {
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.order-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-item-details {
+    flex: 1;
+}
+
+.order-item-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.order-item-options {
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+.order-item-price {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.summary-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 20px 0;
+}
+
+.summary-row.total {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* استجابة للشاشات المختلفة */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .option-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .option-details {
+        margin-right: 0;
+    }
+
+    .option-price {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .step-header {
+        padding: 15px;
+    }
+
+    .step-header h3 {
+        font-size: 18px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+    }
+
+    .step-content {
+        padding: 20px 15px;
+    }
+}

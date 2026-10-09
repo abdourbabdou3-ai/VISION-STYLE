@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي - VISION STYLE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="VISION STYLE">
+                        <span>VISION STYLE</span>
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="ابحث عن نظارات...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="header-icons">
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="count">0</span>
+                        </a>
+                        <a href="account.html" class="icon-link active">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">التواصل</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="account-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>حسابي</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span> / </span>
+                    <span>حسابي</span>
+                </div>
+            </div>
+
+            <div class="account-container">
+                <!-- القائمة الجانبية -->
+                <aside class="account-sidebar">
+                    <div class="sidebar-header">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.jpg" alt="صورة المستخدم">
+                        </div>
+                        <div class="user-info">
+                            <h3>أحمد محمد</h3>
+                            <p>ahmed.mohamed@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu">
+                        <li><a href="#orders" class="menu-link active" data-tab="orders">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>طلباتي</span>
+                        </a></li>
+                        <li><a href="#profile" class="menu-link" data-tab="profile">
+                            <i class="fas fa-user"></i>
+                            <span>بيانات الملف الشخصي</span>
+                        </a></li>
+                        <li><a href="#favorites" class="menu-link" data-tab="favorites">
+                            <i class="fas fa-heart"></i>
+                            <span>المفضلة</span>
+                        </a></li>
+                        <li><a href="#password" class="menu-link" data-tab="password">
+                            <i class="fas fa-lock"></i>
+                            <span>تغيير كلمة السر</span>
+                        </a></li>
+                        <li><a href="#" class="menu-link logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>تسجيل الخروج</span>
+                        </a></li>
+                    </ul>
+                </aside>
+
+                <!-- المحتوى الرئيسي -->
+                <div class="account-content">
+                    <!-- تبويب الطلبات -->
+                    <div class="tab-content active" id="orders">
+                        <h2>طلباتي</h2>
+                        <div class="orders-container">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-number">طلب #VS12345</div>
+                                    <div class="order-date">15 يونيو 2023</div>
+                                    <div class="order-status delivered">تم التسليم</div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="item-image">
+                                            <img src="images/product1.jpg" alt="نظارات رياضية Ray-Ban">
+                                        </div>
+                                        <div class="item-details">
+                                            <h4>نظارات رياضية Ray-Ban</h4>
+                                            <p>اللون: أسود | المقاس: M | الكمية: 1</p>
+                                        </div>
+                                        <div class="item-price">12000 د.ج</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="item-image">
+                                            <img src="images/product2.jpg" alt="نظارات كلاسيكية Oakley">
+                                        </div>
+                                        <div class="item-details">
+                                            <h4>نظارات كلاسيكية Oakley</h4>
+                                            <p>اللون: بني | المقاس: L | الكمية: 1</p>
+                                        </div>
+                                        <div class="item-price">10000 د.ج</div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">الإجمالي: 22500 د.ج</div>
+                                    <button class="btn btn-secondary">عرض التفاصيل</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-number">طلب #VS12344</div>
+                                    <div class="order-date">10 يونيو 2023</div>
+                                    <div class="order-status processing">قيد المعالجة</div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="item-image">
+                                            <img src="images/product3.jpg" alt="نظارات طبية Gucci">
+                                        </div>
+                                        <div class="item-details">
+                                            <h4>نظارات طبية Gucci</h4>
+                                            <p>اللون: أسود | المقاس: M | الكمية: 1</p>
+                                        </div>
+                                        <div class="item-price">18000 د.ج</div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">الإجمالي: 18500 د.ج</div>
+                                    <button class="btn btn-secondary">تتبع الطلب</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب الملف الشخصي -->
+                    <div class="tab-content" id="profile">
+                        <h2>بيانات الملف الشخصي</h2>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">الاسم الأول</label>
+                                    <input type="text" id="first-name" value="أحمد">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">اسم العائلة</label>
+                                    <input type="text" id="last-name" value="محمد">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" value="ahmed.mohamed@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" value="+213 555 123 456">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">العنوان</label>
+                                <input type="text" id="address" value="شارع الأمير عبد القادر، حي الحامة">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">المدينة</label>
+                                    <input type="text" id="city" value="الجزائر العاصمة">
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">الرمز البريدي</label>
+                                    <input type="text" id="postal-code" value="16000">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                        </form>
+                    </div>
+
+                    <!-- تبويب المفضلة -->
+                    <div class="tab-content" id="favorites">
+                        <h2>المفضلة</h2>
+                        <div class="favorites-container">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="images/product1.jpg" alt="نظارات رياضية Ray-Ban">
+                                    <div class="product-actions">
+                                        <div class="action-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="action-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">نظارات رياضية Ray-Ban</h3>
+                                    <div class="product-price">12000 د.ج</div>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="rating-count">(125)</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="btn btn-secondary">عرض التفاصيل</button>
+                                        <button class="btn btn-primary">أضف للسلة</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="images/product5.jpg" alt="نظارات شمسية مستطيلة">
+                                    <div class="product-actions">
+                                        <div class="action-btn">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="action-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">نظارات شمسية مستطيلة</h3>
+                                    <div class="product-price">8000 د.ج</div>
+                                    <div class="product-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="rating-count">(150)</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="btn btn-secondary">عرض التفاصيل</button>
+                                        <button class="btn btn-primary">أضف للسلة</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب تغيير كلمة السر -->
+                    <div class="tab-content" id="password">
+                        <h2>تغيير كلمة السر</h2>
+                        <form class="password-form">
+                            <div class="form-group">
+                                <label for="current-password">كلمة السر الحالية</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">كلمة السر الجديدة</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">تأكيد كلمة السر الجديدة</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">تغيير كلمة السر</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>روابط مهمة</h3>
+                    <ul>
+                        <li><a href="policies.html">السياسات</a></li>
+                        <li><a href="terms.html">شروط الاستخدام</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك للحصول على آخر العروض والمنتجات الجديدة</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني">
+                        <button type="submit">اشترك</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VISION STYLE. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
